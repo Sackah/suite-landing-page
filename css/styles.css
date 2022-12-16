@@ -26,13 +26,13 @@ body{
     /*Header*/
 .header{
     height: 56px;
-    width: calc(var(--body-width) - 100px);
+    width: var(--body-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .header-img{
@@ -67,6 +67,14 @@ body{
     z-index: 0;
     position: absolute;
 }
+.whip{
+    width: 290px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    left: 380px;
+    top: 70px;
+}
 .text{
     position: absolute;
     width: 660px;
@@ -77,7 +85,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    left: 100px;
+    left: 50px;
     top: 100px;
 }
 .text > h1{
@@ -90,6 +98,7 @@ body{
     font-size: 1.1rem;
     font-weight: 100;
     margin-bottom: auto;
+    color: rgb(23, 35, 57, 0.6);
 }
 .btn2{
     width: 256px;
@@ -97,6 +106,7 @@ body{
     margin-top: auto;
     background-color: var(--main-blue);
     font-family: sans-serif;
+    font-weight: 700;
     font-size: 1rem;
     color: var(--main-white);
     border-radius: 6px;
