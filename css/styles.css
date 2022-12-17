@@ -10,7 +10,7 @@
 
 body{
     background-color: var(--main-white);
-    width: var(--body-width);
+    width: 100%;
     margin: auto;
 }
 
@@ -53,26 +53,28 @@ body{
 .btn1:hover{
     background-color: var(--main-blue);
     color: var(--main-white);
+    cursor: pointer;
 }
 
       /*Content*/
-.main-content{
+.main{
     width: var(--body-width);
+    margin: auto;
 }
-.contents{
+.main-container{
     width: var(--body-width);
     height: 600px;
     margin: auto;
     background-color: var(--main-white);
     z-index: 0;
-    position: absolute;
+    position: relative;
 }
 .whip{
     width: 290px;
     height: 40px;
     position: absolute;
     z-index: 2;
-    left: 380px;
+    left: 330px;
     top: 70px;
 }
 .text{
@@ -85,7 +87,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    left: 50px;
+    left: 0;
     top: 100px;
 }
 .text > h1{
@@ -97,7 +99,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 100;
-    margin-bottom: auto;
+    margin-bottom: 70px;
     color: rgb(23, 35, 57, 0.6);
 }
 .btn2{
@@ -120,12 +122,13 @@ body{
         #FFA84E
     );
     border: none;
+    cursor: pointer;
 }
 .phone-img-portrait{
     position: absolute;
     width: 350px;
     height: 600px;
-    left: 50%;
+    left: 47%;
     z-index: 1;
 }
 .phone-img-landscape{
@@ -156,18 +159,42 @@ body{
     margin-bottom: -1.5rem;
 }
 
+    /*Testimony*/
+.testimony{
+    width: var(--body-width);
+    height: 600px;
+    border: 1px solid #172339;
+    margin: auto;
+    margin-top: 150px;
+}
+
+    /*Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+    #A060FF 0%,
+    #CB30E3 60%,
+    #FFA84E 90%
+    ); 
+    border-radius: 5px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #A060FF; 
+  }
+
       /*Media queries*/ 
 /*laptop with touch*/
 @media (max-width: 1280px) and (min-width: 1110px){
-    .numbers{
-        margin-right: 3rem;
-    }
+    
 }
 /*tablet*/
 @media (max-width: 1024px) and (min-width: 413px){
-    body{
-        margin: auto;
-    }
+    /*header*/
     .header{
         width: var(--body-width);
         margin-top: 25px;
@@ -180,17 +207,57 @@ body{
     .header-img{
         width: 81;
         height: 32;
+    }
+    /*content*/
+    .main-container{
+        height: 482px;
+        width: var(--body-width);
+        margin: auto;
+    }
+    .phone-img-portrait{
+        width: 281px;
+        height: 482px;
+        right: 0 !important;
+        left: auto;
+        top: 0;
+    }
+    .phone-img-landscape{
+        right: 0;
+        left: auto;
+        top: 0;
+    }
+    .text{
+        height: 340px;
+        width: var(--body-width);
+        top: 80px;
+    }
+    .text > h1{
+        font-size: 3.5rem;
+    }
+    .text > p{
+        font-size: 0.875rem;
+        margin-bottom: auto;
+    }
+    .whip{
+        width: 231px;
+        height: 21px;
+        left: 260px;
+        top: 50px;
+    }
+    .numbers{
+        flex-direction: row;
+        top: 470px;
+        position: relative;
+        width: var(--body-width);
+        text-align: center;
+        margin: auto;
     }
 }
 /*mobile*/
-@media (max-width: 414px) and (min-width: 200px){
+@media (max-width: 414px) and (min-width: 279px){
     /*Header*/
-    body{
-        margin: auto;
-    }
     .header{
-        width: var(--body-width);
-        margin-top: 25px;
+        height: 48px;
     }
     .btn1{
         height: 42px;
@@ -200,5 +267,59 @@ body{
     .header-img{
         width: 81;
         height: 32;
+    }
+    /*Content*/
+    .main-container{
+        height: 898px;
+        width: var(--body-width);
+        margin: auto;
+    }
+    .phone-img-portrait{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 40%;
+        left: 20;
+        margin: auto;
+        z-index: -1;
+    }
+    .phone-img-landscape{
+        position: relative;
+        width: var(--body-width);
+        height: 240px;
+        left: 0;
+        z-index: 1;
+        top: 0;
+    }
+    .text{
+        height: 290px;
+        width: var(--body-width);
+        top: 30px;
+        position: relative;
+    }
+    .text > h1{
+        font-size: 2rem;
+    }
+    .text > p{
+        font-size: 0.875rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .whip{
+        width: 151px;
+        height: 19px;
+        left: 140px;
+        top: 15px;
+    }
+    .numbers{
+        width: var(--body-width);
+        height: 313px;
+        position: relative;
+        font-size: 1.6rem;
+        top: 0;
+        text-align: center;
+    }
+    .text, .numbers, .phone-img-landscape{
+        display: block;
     }
 }
