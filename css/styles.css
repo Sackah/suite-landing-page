@@ -76,7 +76,6 @@ a{
     width: var(--body-width);
     height: 600px;
     margin: auto;
-    background-color: var(--main-white);
     z-index: 0;
     position: relative;
 }
