@@ -192,8 +192,9 @@ a{
     height: 535px;
     margin-top: 55px;
     background-color: var(--main-blue);
+    position: relative;
     border-radius: 15px;
-    z-index: 0;
+    z-index: 2;
 }
 .testimony-txt{
     width: 380px;
@@ -229,7 +230,7 @@ a{
     margin-top: -55px;
     margin-bottom: 0;
     position: absolute;
-    z-index: 1;
+    z-index: 4;
 }
 .testimony-radius{
     position: absolute;
@@ -238,7 +239,7 @@ a{
     margin-top: 80px;
     margin-left: 20px;
     margin-right: auto;
-    z-index: 0;
+    z-index: 3;
 }
 .whip2{
     position: relative;
@@ -249,23 +250,23 @@ a{
 }
 
     /*Footer*/
-.footer{
+.footer-bg{
     width: 100%;
     height: 230px;
     margin-top: -55px;
     display: flex;
     align-items: center;
 }
-.footer-bg{
+.footer-container{
     position: relative;
     width: 100%;
     height: 500px;
     margin: auto;
-    z-index: -1;
+    z-index: 1;
     background-color: var(--main-cream);
     top: -275px;
 }
-.footer-container{
+.footer{
     width: var(--body-width);
     height: 32px;
     display: flex;
@@ -292,7 +293,7 @@ a{
     align-items: center;
 }
 .icon:hover{
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
     /*Scrollbar*/
@@ -434,14 +435,14 @@ a{
         margin-top: 2.5rem;
     }
     /*footer*/
-    .footer{
+    .footer-bg{
         margin-top: 0;
     }
-    .footer-container{
+    .footer{
         width: var(--width-2);
         margin-top: 590px;
     }
-    .footer-bg{
+    .footer-container{
         height: 700px;
         top: -465px;
     }
@@ -576,17 +577,17 @@ a{
         font-size: 1.3rem;
     }
     /*footer*/
-    .footer{
+    .footer-bg{
         margin-top: 0;
     }
-    .footer-container{
+    .footer{
         flex-direction: column;
         width: 125px;
         height: 150px;
         align-items: center;
         margin-top: 510px;
     }
-    .footer-bg{
+    .footer-container{
         height: 800px;
         top: -455px;
     }
@@ -720,17 +721,17 @@ a{
         font-size: 1.2rem;
     }
     /*footer*/
-    .footer{
+    .footer-bg{
         margin-top: 0;
     }
-    .footer-container{
+    .footer{
         flex-direction: column;
         width: 125px;
         height: 150px;
         align-items: center;
         margin-top: 510px;
     }
-    .footer-bg{
+    .footer-container{
         height: 800px;
         top: -450px;
     }
