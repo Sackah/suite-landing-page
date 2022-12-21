@@ -5,7 +5,9 @@
 :root{
     --main-white: #FAF8F6;
     --main-blue: #172339;
-    --body-width: 86vw;
+    --main-cream: #F3EDE7;
+    --body-width: 80vw;
+    --width-2: 87vw;
 }
 
 body{
@@ -18,6 +20,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 
 .block{
     display: block;
@@ -42,8 +45,8 @@ a{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px !important;
+    margin-bottom: 50px;
 }
 
 .header-img{
@@ -67,7 +70,7 @@ a{
     cursor: pointer;
 }
 
-      /*Content*/
+      /*Main Content*/
 .main{
     width: var(--body-width);
     margin: auto;
@@ -84,7 +87,7 @@ a{
     height: 40px;
     position: absolute;
     z-index: 2;
-    left: 325px;
+    left: 345px;
     top: 60px;
 }
 .text{
@@ -107,10 +110,13 @@ a{
 }
 .text > p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 100;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    margin-top: 50px;
     color: rgb(23, 35, 57, 0.6);
+    line-height: 30px;
+    word-spacing: 5px;
 }
 .btn2{
     width: 256px;
@@ -150,19 +156,28 @@ a{
     position: absolute;
     right: 0;
     width: 190px;
-    height: 375px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-family: sans-serif;
     font-size: 1.7rem;
     margin: auto;
-    top: 100px;
+    top: 0;
     z-index: 2;
     color: var(--main-blue);
 }
+.stats{
+    padding-left: 20%;
+}
 .stats > h1{
-    margin-bottom: -1.5rem;
+    margin-bottom: -0.8rem;
+    font-weight: 700;
+}
+.stats > p{
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: 1.2rem;
 }
 
     /*Testimony*/
@@ -178,36 +193,38 @@ a{
     margin-top: 55px;
     background-color: var(--main-blue);
     border-radius: 15px;
+    z-index: 0;
 }
 .testimony-txt{
-    width: 350px;
-    height: 369px; 
+    width: 380px;
+    height: 380px; 
     position: relative;
     margin-top: auto;
     margin-left: auto;
-    top: 40px;
-    margin-right: 140px;
+    top: 25px;
+    margin-right: 100px;
     color: var(--main-white);
-
 }
 .testimony-txt > h1{
     font-family: Epilogue, sans-serif;
     font-size: 3rem;
     margin-top: 0;
+    letter-spacing: 0.1rem;
 }
 .testimony-txt > p{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.3rem;
-    opacity: 0.6;
+    font-family: 'Epilogue Regular', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 2.2rem;
 }
 .testimony-txt > h3{
     font-family: Epilogue, sans-serif;
     font-size: 1.3rem;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     margin-bottom: -1rem;
 }
 .testimony-img{
-    margin-left: 170px;
+    margin-left: 130px;
     margin-right: auto;
     margin-top: -55px;
     margin-bottom: 0;
@@ -219,7 +236,7 @@ a{
     width: 600px;
     height: 600px;
     margin-top: 80px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: auto;
     z-index: 0;
 }
@@ -227,7 +244,7 @@ a{
     position: relative;
     width: 65px;
     height: 53px;
-    left: 49%;
+    left: 38vw;
     top: 30%;
 }
 
@@ -239,12 +256,23 @@ a{
     display: flex;
     align-items: center;
 }
+.footer-bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    z-index: -1;
+    background-color: var(--main-cream);
+    top: -275px;
+}
 .footer-container{
     width: var(--body-width);
     height: 32px;
     display: flex;
     justify-content: space-between;
     margin: auto;
+    position: relative;
+    margin-top: 380px;
 }
 .footer-img, .footer-txt, .social-icons{
     display: inline;
@@ -291,7 +319,7 @@ a{
 @media (max-width: 1192px) and (min-width: 592px){
     /*header*/
     .header{
-        width: var(--body-width);
+        width: var(--width-2);
         margin-top: 25px;
     }
     .btn1{
@@ -306,8 +334,14 @@ a{
     /*content*/
     .main-container{
         height: 482px;
-        width: var(--body-width);
+        position: relative;
+        width: var(--width-2);
         margin: auto;
+    }
+    .main{
+        width: var(--width-2);
+        margin: auto;
+        margin-top: 100px;
     }
     .phone-img-portrait{
         width: 281px;
@@ -323,37 +357,45 @@ a{
     }
     .text{
         height: 340px;
-        width: var(--body-width);
+        width: var(--width-2);
         top: 80px;
     }
     .text > h1{
         font-size: 3.5rem;
     }
     .text > p{
-        font-size: 0.875rem;
-        margin-bottom: auto;
+        margin-bottom: 60px;
+        font-size: 1.3rem;
+        word-spacing: 3px;
     }
     .whip{
         width: 231px;
-        height: 21px;
-        left: 260px;
-        top: 50px;
+        height: 30px;
+        left: 270px;
+        top: 30px;
     }
     .numbers{
         flex-direction: row;
-        top: 470px;
+        top: 530px;
         position: relative;
-        width: var(--body-width);
+        width: var(--width-2);
         text-align: center;
         margin: auto;
+        font-size: 2rem;
+    }
+    .stats{
+        width: var(--width-2);
+        padding-left: 0;
     }
     /*testimony*/
     .testimony-container{
         height: 865px;
+        width: var(--width-2);
     }
     .testimony-bg{
         position: relative;
-        height: 684px;
+        height: 720px;
+        width: var(--width-2);
         margin-top: 0;
         top: 180px;
     }
@@ -361,38 +403,47 @@ a{
         width: 252px;
         height: 402px;
         margin: auto;
-        margin-left: 28%;
+        margin-left: 30vw;
     }
     .testimony-radius{
         width: 400px;
         height: 400px;
         margin: auto;
-        margin-left: 20%;
+        margin-left: 24%;
         margin-top: -90px;
     }
     .testimony-txt{
-        width: 520px;
+        width: 530px;
         height: 282px;
         text-align: center;
         margin: auto;
         top: 280px;
     }
     .whip2{
-        left: 43%;
+        left: 40vw;
         top: 37%;
     }
-    .testimony-txt > h1{
-        font-size: 2.5rem;
-    }
     .testimony-txt > p{
-        font-size: 1.25rem;
+        line-height: 2rem;
+        font-size: 1.45rem;
+        word-spacing: 0.1rem;
+        opacity: 0.9;
     }
     .testimony-txt > h3{
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
     }
     /*footer*/
     .footer{
         margin-top: 0;
+    }
+    .footer-container{
+        width: var(--width-2);
+        margin-top: 590px;
+    }
+    .footer-bg{
+        height: 700px;
+        top: -465px;
     }
 }
 
@@ -401,6 +452,7 @@ a{
     /*Header*/
     .header{
         height: 48px;
+        width: var(--width-2);
     }
     .btn1{
         height: 42px;
@@ -413,9 +465,12 @@ a{
     }
     /*Content*/
     .main-container{
-        height: 898px;
-        width: var(--body-width);
+        height: 1000px;
+        width: var(--width-2);
         margin: auto;
+    }
+    .main{
+        width: var(--width-2);
     }
     .phone-img-portrait{
         position: absolute;
@@ -424,15 +479,16 @@ a{
     }
     .phone-img-landscape{
         position: relative;
-        width: var(--body-width);
+        width: var(--width-2);
         height: 240px;
         left: 0;
         z-index: 1;
         top: 0;
+        margin-top: 40px;
     }
     .text{
         height: 290px;
-        width: var(--body-width);
+        width: var(--width-2);
         top: 30px;
         position: relative;
     }
@@ -440,24 +496,34 @@ a{
         font-size: 2rem;
     }
     .text > p{
-        font-size: 0.875rem;
+        font-size: 1rem;
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        line-height: 20px;
+        word-spacing: 2px;
     }
     .whip{
-        width: 151px;
+        width: 140px;
         height: 19px;
-        left: 140px;
+        left: 145px;
         top: 15px;
     }
     .numbers{
-        width: var(--body-width);
-        height: 313px;
+        display: flex !important;
+        flex-direction: column;
+        width: var(--width-2);
+        height: 400px;
         position: relative;
-        font-size: 1.6rem;
-        top: 0;
+        font-size: 1.8rem;
         text-align: center;
+        margin-top: 30px;
     }
+    .stats{
+        height: 33.3%;
+        padding-left: 0;
+    }
+    
     .text, .numbers, .phone-img-landscape{
         display: block;
     }
@@ -479,7 +545,7 @@ a{
         width: 252px;
         height: 402px;
         margin: auto;
-        margin-left: 18%;
+        margin-left: 20vw;
     }
     .testimony-radius{
         width: 350px;
@@ -496,14 +562,15 @@ a{
         top: 280px;
     }
     .whip2{
-        left: 43%;
-        top: 37%;
+        left: 40vw;
+        top: 35%;
     }
     .testimony-txt > h1{
         font-size: 2.5rem;
     }
     .testimony-txt > p{
         font-size: 1.3rem;
+        opacity: 0.9;
     }
     .testimony-txt > h3{
         font-size: 1.3rem;
@@ -517,6 +584,11 @@ a{
         width: 125px;
         height: 150px;
         align-items: center;
+        margin-top: 510px;
+    }
+    .footer-bg{
+        height: 800px;
+        top: -455px;
     }
 }
 
@@ -525,6 +597,7 @@ a{
     /*Header*/
     .header{
         height: 46px;
+        width: var(--width-2);
     }
     .btn1{
         height: 40px;
@@ -537,9 +610,12 @@ a{
     }
     /*Content*/
     .main-container{
-        height: 898px;
-        width: var(--body-width);
+        height: 930px;
+        width: 100%;
         margin: auto;
+    }
+    .main{
+        width: var(--width-2);
     }
     .phone-img-portrait{
         position: absolute;
@@ -548,41 +624,49 @@ a{
     }
     .phone-img-landscape{
         position: relative;
-        width: var(--body-width);
+        width: var(--width-2);
         height: 178px;
         left: 0;
         z-index: 1;
         top: 0;
-        margin-top: 80px;
+        margin-top: 20px;
     }
     .text{
         height: 290px;
-        width: var(--body-width);
+        width: var(--width-2);
         top: 20px;
         position: relative;
     }
     .btn2{
-        width: var(--body-width);
+        width: var(--width-2);
     }
     .text > h1{
-        font-size: 2.1rem;
+        font-size: 1.65rem;
     }
     .text > p{
-        font-size: 0.875rem;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        line-height: 20px;
+        word-spacing: 2px;
     }
     .whip{
         width: 0;
         height: 0;
     }
     .numbers{
-        width: var(--body-width);
-        height: 313px;
+        display: flex !important;
+        flex-direction: column;
+        width: var(--width-2);
+        height: 400px;
         position: relative;
         font-size: 1.6rem;
-        top: 0;
         text-align: center;
+        margin-top: 30px;
+    }
+    .stats{
+        height: 33.3%;
+        padding-left: 0;
     }
     .text, .numbers, .phone-img-landscape{
         display: block;
@@ -591,7 +675,7 @@ a{
     .testimony-container{
         width: 100%;
         height: 929px;
-        margin-top: 50px;
+        margin-top: 10px;
         overflow-x: hidden;
     }
     .testimony-bg{
@@ -622,14 +706,15 @@ a{
         top: 280px;
     }
     .whip2{
-        left: 43%;
-        top: 37%;
+        left: 40vw;
+        top: 35%;
     }
     .testimony-txt > h1{
         font-size: 2.1rem;
     }
     .testimony-txt > p{
         font-size: 1.2rem;
+        opacity: 0.9;
     }
     .testimony-txt > h3{
         font-size: 1.2rem;
@@ -643,5 +728,10 @@ a{
         width: 125px;
         height: 150px;
         align-items: center;
+        margin-top: 510px;
+    }
+    .footer-bg{
+        height: 800px;
+        top: -450px;
     }
 }
